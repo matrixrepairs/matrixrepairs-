@@ -1,0 +1,867 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Matrix Tech Repairs - Professional Electronics Repair | Miami Gardens & Hollywood, FL</title>
+    <meta name="description" content="Expert repair for smartphones, tablets, computers, and gaming consoles in Miami Gardens and Hollywood, Florida. Same-day service with warranty.">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            line-height: 1.6;
+            color: #0a0a0a;
+            background: #ffffff;
+        }
+        
+        /* Hero Section - More Modern */
+        .hero {
+            position: relative;
+            background: #000000;
+            color: white;
+            padding: 140px 20px 120px;
+            text-align: center;
+            overflow: hidden;
+        }
+        
+        .hero::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: 
+                radial-gradient(circle at 20% 50%, rgba(255,255,255,0.05) 0%, transparent 50%),
+                radial-gradient(circle at 80% 80%, rgba(255,255,255,0.05) 0%, transparent 50%);
+        }
+        
+        .hero-content {
+            max-width: 1000px;
+            margin: 0 auto;
+            position: relative;
+            z-index: 1;
+        }
+        
+        .hero h1 {
+            font-size: 4.5rem;
+            font-weight: 900;
+            margin-bottom: 15px;
+            line-height: 1.1;
+            letter-spacing: -2px;
+        }
+        
+        .hero .tagline {
+            font-size: 1.8rem;
+            font-weight: 300;
+            letter-spacing: 4px;
+            margin-bottom: 25px;
+            color: #ffffff;
+            text-transform: uppercase;
+            opacity: 0.9;
+        }
+        
+        .hero p {
+            font-size: 1.25rem;
+            margin-bottom: 50px;
+            opacity: 0.85;
+            max-width: 700px;
+            margin-left: auto;
+            margin-right: auto;
+            font-weight: 300;
+        }
+        
+        .btn {
+            display: inline-block;
+            padding: 20px 50px;
+            margin: 12px;
+            font-size: 1.05rem;
+            font-weight: 600;
+            text-decoration: none;
+            border-radius: 8px;
+            transition: all 0.3s ease;
+            cursor: pointer;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+        
+        .btn-primary {
+            background: white;
+            color: #000000;
+        }
+        
+        .btn-primary:hover {
+            background: #f5f5f5;
+            transform: translateY(-2px);
+            box-shadow: 0 8px 30px rgba(255,255,255,0.2);
+        }
+        
+        .btn-secondary {
+            background: transparent;
+            color: white;
+            border: 2px solid rgba(255,255,255,0.3);
+        }
+        
+        .btn-secondary:hover {
+            border-color: white;
+            background: rgba(255,255,255,0.1);
+            transform: translateY(-2px);
+        }
+        
+        /* Container */
+        .container {
+            max-width: 1400px;
+            margin: 0 auto;
+            padding: 0 40px;
+        }
+        
+        /* Section */
+        .section {
+            padding: 120px 20px;
+        }
+        
+        .section-light {
+            background: #fafafa;
+        }
+        
+        .section-title {
+            text-align: center;
+            font-size: 3.5rem;
+            font-weight: 800;
+            margin-bottom: 20px;
+            color: #000000;
+            letter-spacing: -1px;
+        }
+        
+        .section-subtitle {
+            text-align: center;
+            font-size: 1.3rem;
+            color: #666;
+            margin-bottom: 80px;
+            max-width: 700px;
+            margin-left: auto;
+            margin-right: auto;
+            font-weight: 300;
+        }
+        
+        /* Benefits Section - Modern Grid */
+        .benefits {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 60px;
+            max-width: 1400px;
+            margin: 0 auto;
+        }
+        
+        .benefit-card {
+            background: white;
+            padding: 60px 40px;
+            border-radius: 20px;
+            transition: all 0.4s ease;
+            border: 1px solid #e8e8e8;
+            position: relative;
+        }
+        
+        .benefit-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 4px;
+            background: #000000;
+            transform: scaleX(0);
+            transition: transform 0.4s ease;
+        }
+        
+        .benefit-card:hover::before {
+            transform: scaleX(1);
+        }
+        
+        .benefit-card:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 20px 60px rgba(0,0,0,0.1);
+        }
+        
+        .benefit-icon {
+            font-size: 4rem;
+            margin-bottom: 30px;
+        }
+        
+        .benefit-card h3 {
+            font-size: 1.8rem;
+            margin-bottom: 20px;
+            color: #000000;
+            font-weight: 700;
+        }
+        
+        .benefit-card p {
+            color: #666;
+            line-height: 1.9;
+            font-size: 1.05rem;
+            font-weight: 300;
+        }
+        
+        /* Services Section - Modern Cards */
+        .service-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 40px;
+            max-width: 1400px;
+            margin: 0 auto;
+        }
+        
+        .service-card {
+            background: white;
+            padding: 50px 40px;
+            border-radius: 20px;
+            text-align: center;
+            transition: all 0.4s ease;
+            border: 1px solid #e8e8e8;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .service-card::after {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(90deg, transparent, rgba(255,255,255,0.3), transparent);
+            transition: left 0.5s;
+        }
+        
+        .service-card:hover::after {
+            left: 100%;
+        }
+        
+        .service-card:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 20px 60px rgba(0,0,0,0.08);
+            border-color: #000000;
+        }
+        
+        .service-icon {
+            font-size: 4.5rem;
+            margin-bottom: 25px;
+        }
+        
+        .service-card h3 {
+            font-size: 1.7rem;
+            margin-bottom: 18px;
+            color: #000000;
+            font-weight: 700;
+        }
+        
+        .service-card p {
+            color: #666;
+            line-height: 1.8;
+            font-size: 1.05rem;
+            font-weight: 300;
+        }
+        
+        .service-specialty {
+            margin-top: 15px;
+            padding: 10px 20px;
+            background: #000000;
+            color: white;
+            border-radius: 20px;
+            display: inline-block;
+            font-size: 0.9rem;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+        
+        /* Process Steps - Timeline Style */
+        .process-steps {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 80px;
+            max-width: 1400px;
+            margin: 0 auto;
+            position: relative;
+        }
+        
+        .process-steps::before {
+            content: '';
+            position: absolute;
+            top: 50px;
+            left: 15%;
+            right: 15%;
+            height: 2px;
+            background: linear-gradient(90deg, #000 33%, transparent 33%, transparent 66%, #000 66%);
+        }
+        
+        .step {
+            text-align: center;
+            position: relative;
+        }
+        
+        .step-number {
+            width: 100px;
+            height: 100px;
+            background: #000000;
+            color: white;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 2.8rem;
+            font-weight: 800;
+            margin: 0 auto 35px;
+            box-shadow: 0 10px 40px rgba(0,0,0,0.15);
+            position: relative;
+            z-index: 2;
+        }
+        
+        .step h3 {
+            font-size: 1.8rem;
+            margin-bottom: 18px;
+            color: #000000;
+            font-weight: 700;
+        }
+        
+        .step p {
+            color: #666;
+            line-height: 1.9;
+            font-size: 1.05rem;
+            font-weight: 300;
+        }
+        
+        /* Locations Section - Side by Side Cards */
+        .locations {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 60px;
+            max-width: 1400px;
+            margin: 0 auto;
+        }
+        
+        .location-card {
+            background: white;
+            padding: 60px 50px;
+            border-radius: 20px;
+            box-shadow: 0 10px 40px rgba(0,0,0,0.08);
+            border: 1px solid #e8e8e8;
+            transition: all 0.3s ease;
+        }
+        
+        .location-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 20px 60px rgba(0,0,0,0.12);
+        }
+        
+        .location-card h3 {
+            font-size: 2.2rem;
+            margin-bottom: 35px;
+            color: #000000;
+            border-bottom: 3px solid #000000;
+            padding-bottom: 20px;
+            font-weight: 800;
+        }
+        
+        .location-info {
+            margin-bottom: 25px;
+            color: #333;
+            font-size: 1.1rem;
+            line-height: 1.8;
+        }
+        
+        .location-info strong {
+            color: #000000;
+            display: block;
+            margin-bottom: 8px;
+            font-weight: 700;
+            font-size: 1.05rem;
+        }
+        
+        .location-phone {
+            font-size: 1.6rem;
+            font-weight: 800;
+            color: #000000;
+            margin: 30px 0;
+            display: block;
+        }
+        
+        .location-phone:hover {
+            opacity: 0.7;
+        }
+        
+        /* CTA Section - Bold */
+        .cta-section {
+            background: #000000;
+            color: white;
+            padding: 120px 20px;
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .cta-section::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: 
+                radial-gradient(circle at 30% 40%, rgba(255,255,255,0.03) 0%, transparent 50%),
+                radial-gradient(circle at 70% 70%, rgba(255,255,255,0.03) 0%, transparent 50%);
+        }
+        
+        .cta-content {
+            position: relative;
+            z-index: 1;
+        }
+        
+        .cta-section h2 {
+            font-size: 3.8rem;
+            margin-bottom: 25px;
+            font-weight: 900;
+            letter-spacing: -1px;
+        }
+        
+        .cta-section p {
+            font-size: 1.35rem;
+            margin-bottom: 50px;
+            opacity: 0.85;
+            font-weight: 300;
+        }
+        
+        /* Contact Form - Clean Design */
+        .contact-form {
+            max-width: 800px;
+            margin: 0 auto;
+            background: white;
+            padding: 70px 60px;
+            border-radius: 25px;
+            box-shadow: 0 20px 80px rgba(0,0,0,0.08);
+            border: 1px solid #e8e8e8;
+        }
+        
+        .form-group {
+            margin-bottom: 30px;
+            text-align: left;
+        }
+        
+        .form-group label {
+            display: block;
+            margin-bottom: 10px;
+            color: #000000;
+            font-weight: 600;
+            font-size: 1rem;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            font-size: 0.85rem;
+        }
+        
+        .form-group input,
+        .form-group select,
+        .form-group textarea {
+            width: 100%;
+            padding: 18px;
+            border: 2px solid #e8e8e8;
+            border-radius: 12px;
+            font-size: 1.05rem;
+            transition: all 0.3s;
+            font-family: inherit;
+            background: #fafafa;
+        }
+        
+        .form-group input:focus,
+        .form-group select:focus,
+        .form-group textarea:focus {
+            outline: none;
+            border-color: #000000;
+            background: white;
+        }
+        
+        .btn-submit {
+            width: 100%;
+            padding: 22px;
+            background: #000000;
+            color: white;
+            border: none;
+            border-radius: 12px;
+            font-size: 1.1rem;
+            font-weight: 700;
+            cursor: pointer;
+            transition: all 0.3s;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+        }
+        
+        .btn-submit:hover {
+            background: #1a1a1a;
+            transform: translateY(-2px);
+            box-shadow: 0 10px 40px rgba(0,0,0,0.2);
+        }
+        
+        /* Footer - Minimal */
+        footer {
+            background: #0a0a0a;
+            color: white;
+            padding: 80px 20px 40px;
+            text-align: center;
+        }
+        
+        .footer-content {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+        
+        .footer-content h3 {
+            font-size: 2.5rem;
+            margin-bottom: 15px;
+            font-weight: 900;
+            letter-spacing: -1px;
+        }
+        
+        .footer-tagline {
+            font-size: 1.1rem;
+            margin-bottom: 40px;
+            color: #999;
+            letter-spacing: 3px;
+            text-transform: uppercase;
+            font-weight: 300;
+        }
+        
+        .footer-info {
+            margin: 30px 0;
+            font-size: 1.05rem;
+            line-height: 2;
+            color: #ccc;
+            font-weight: 300;
+        }
+        
+        /* WhatsApp Button - Modern */
+        .whatsapp-float {
+            position: fixed;
+            width: 70px;
+            height: 70px;
+            bottom: 35px;
+            right: 35px;
+            background: #25d366;
+            color: white;
+            border-radius: 50%;
+            text-align: center;
+            font-size: 38px;
+            box-shadow: 0 8px 30px rgba(37, 211, 102, 0.4);
+            z-index: 100;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: all 0.3s;
+            text-decoration: none;
+        }
+        
+        .whatsapp-float:hover {
+            transform: scale(1.15);
+            box-shadow: 0 12px 45px rgba(37, 211, 102, 0.6);
+        }
+        
+        /* Responsive */
+        @media (max-width: 1024px) {
+            .benefits,
+            .service-grid,
+            .process-steps {
+                grid-template-columns: repeat(2, 1fr);
+                gap: 40px;
+            }
+            
+            .locations {
+                grid-template-columns: 1fr;
+            }
+        }
+        
+        @media (max-width: 768px) {
+            .hero h1 {
+                font-size: 3rem;
+            }
+            
+            .hero .tagline {
+                font-size: 1.3rem;
+            }
+            
+            .section-title {
+                font-size: 2.5rem;
+            }
+            
+            .benefits,
+            .service-grid,
+            .process-steps {
+                grid-template-columns: 1fr;
+                gap: 30px;
+            }
+            
+            .process-steps::before {
+                display: none;
+            }
+            
+            .contact-form {
+                padding: 40px 25px;
+            }
+            
+            .container {
+                padding: 0 20px;
+            }
+        }
+    </style>
+</head>
+<body>
+    
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="hero-content">
+            <h1>Your Device Broken?<br>We Fix It Fast.</h1>
+            <p class="tagline">MATRIX YOUR SAVIOR</p>
+            <p>Expert repair for all electronic devices. Same-day service with warranty in Miami Gardens & Hollywood, Florida.</p>
+            <a href="tel:+17862583507" class="btn btn-primary">Call Miami Gardens</a>
+            <a href="tel:+13057244975" class="btn btn-secondary">Call Hollywood</a>
+        </div>
+    </section>
+    
+    <!-- Why Choose Us -->
+    <section class="section">
+        <div class="container">
+            <h2 class="section-title">Why Matrix Tech Repairs?</h2>
+            <p class="section-subtitle">Your trusted partner for all electronic device repairs in South Florida.</p>
+            
+            <div class="benefits">
+                <div class="benefit-card">
+                    <div class="benefit-icon">⚡</div>
+                    <h3>Fast Service</h3>
+                    <p>Most repairs completed same day. We know your device is essential to your life, so we work quickly without compromising quality.</p>
+                </div>
+                
+                <div class="benefit-card">
+                    <div class="benefit-icon">🛠️</div>
+                    <h3>Expert Technicians</h3>
+                    <p>Years of experience repairing all types of devices. From the latest smartphones to vintage gaming consoles, we've mastered them all.</p>
+                </div>
+                
+                <div class="benefit-card">
+                    <div class="benefit-icon">✅</div>
+                    <h3>Quality Guarantee</h3>
+                    <p>Premium replacement parts and comprehensive warranty on all repairs. Your satisfaction and device longevity are our priorities.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Services -->
+    <section class="section section-light">
+        <div class="container">
+            <h2 class="section-title">We Repair All Electronic Devices</h2>
+            <p class="section-subtitle">From smartphones to gaming consoles — if it's electronic, we can fix it.</p>
+            
+            <div class="service-grid">
+                <div class="service-card">
+                    <div class="service-icon">📱</div>
+                    <h3>iPhone Repair</h3>
+                    <p>Screen replacement, battery, camera, water damage, and all iPhone issues</p>
+                </div>
+                
+                <div class="service-card">
+                    <div class="service-icon">🤖</div>
+                    <h3>Android Repair</h3>
+                    <p>Samsung, Google Pixel, and all Android devices</p>
+                    <span class="service-specialty">Samsung FRP Unlock</span>
+                </div>
+                
+                <div class="service-card">
+                    <div class="service-icon">💻</div>
+                    <h3>Computer Repair</h3>
+                    <p>Mac and PC repairs, upgrades, software troubleshooting</p>
+                </div>
+                
+                <div class="service-card">
+                    <div class="service-icon">📲</div>
+                    <h3>Tablet Repair</h3>
+                    <p>iPad and all tablet brands — screens, batteries, charging ports</p>
+                </div>
+                
+                <div class="service-card">
+                    <div class="service-icon">⌚</div>
+                    <h3>Smartwatches</h3>
+                    <p>Apple Watch, Samsung Galaxy Watch, and more</p>
+                </div>
+                
+                <div class="service-card">
+                    <div class="service-icon">🎮</div>
+                    <h3>Gaming Devices</h3>
+                    <p>Nintendo Switch, PlayStation, Xbox, and retro consoles</p>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- How It Works -->
+    <section class="section">
+        <div class="container">
+            <h2 class="section-title">How It Works</h2>
+            <p class="section-subtitle">Three simple steps to get your device repaired</p>
+            
+            <div class="process-steps">
+                <div class="step">
+                    <div class="step-number">1</div>
+                    <h3>Contact</h3>
+                    <p>Call, text, or visit either location. Free diagnostic to determine the exact issue.</p>
+                </div>
+                
+                <div class="step">
+                    <div class="step-number">2</div>
+                    <h3>Quote</h3>
+                    <p>Get transparent pricing upfront. No hidden fees. You decide if you want to proceed.</p>
+                </div>
+                
+                <div class="step">
+                    <div class="step-number">3</div>
+                    <h3>Repair</h3>
+                    <p>Most repairs completed same day. Device returned working like new with warranty.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Locations -->
+    <section class="section section-light">
+        <div class="container">
+            <h2 class="section-title">Visit Our Locations</h2>
+            <p class="section-subtitle">Two convenient locations serving South Florida</p>
+            
+            <div class="locations">
+                <div class="location-card">
+                    <h3>📍 Miami Gardens</h3>
+                    <div class="location-info">
+                        <strong>Address</strong>
+                        18351 NW 27th Ave<br>
+                        Miami Gardens, FL
+                    </div>
+                    <a href="tel:+17862583507" class="location-phone">📞 (786) 258-3507</a>
+                    <div class="location-info">
+                        <strong>Hours</strong>
+                        Mon-Tue: 10:00 AM - 6:00 PM<br>
+                        Wed-Sun: 10:00 AM - 7:00 PM<br>
+                        Fri, Thu & Sat: 10:00 AM - 8:00 PM
+                    </div>
+                </div>
+                
+                <div class="location-card">
+                    <h3>📍 Hollywood</h3>
+                    <div class="location-info">
+                        <strong>Address</strong>
+                        926 N Federal Hwy<br>
+                        Hollywood, FL
+                    </div>
+                    <a href="tel:+13057244975" class="location-phone">📞 (305) 724-4975</a>
+                    <div class="location-info">
+                        <strong>Hours</strong>
+                        Mon-Tue: 10:00 AM - 6:00 PM<br>
+                        Wed-Sun: 10:00 AM - 7:00 PM<br>
+                        Fri, Thu & Sat: 10:00 AM - 8:00 PM
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- CTA Section -->
+    <section class="cta-section">
+        <div class="cta-content">
+            <h2>Ready to Fix Your Device?</h2>
+            <p>Contact us now for a free diagnostic. Same-day service available.</p>
+            <a href="tel:+17862583507" class="btn btn-primary">Call Miami Gardens</a>
+            <a href="tel:+13057244975" class="btn btn-secondary">Call Hollywood</a>
+        </div>
+    </section>
+    
+    <!-- Contact Form -->
+    <section class="section">
+        <div class="container">
+            <h2 class="section-title">Get Your Free Quote</h2>
+            <p class="section-subtitle">Fill out the form and we'll respond within an hour</p>
+            
+            <form class="contact-form" action="https://formspree.io/f/YOUR_FORM_ID" method="POST">
+                <div class="form-group">
+                    <label for="name">Name *</label>
+                    <input type="text" id="name" name="name" required>
+                </div>
+                
+                <div class="form-group">
+                    <label for="phone">Phone *</label>
+                    <input type="tel" id="phone" name="phone" required>
+                </div>
+                
+                <div class="form-group">
+                    <label for="email">Email</label>
+                    <input type="email" id="email" name="email">
+                </div>
+                
+                <div class="form-group">
+                    <label for="location">Preferred Location *</label>
+                    <select id="location" name="location" required>
+                        <option value="">Select...</option>
+                        <option value="miami-gardens">Miami Gardens</option>
+                        <option value="hollywood">Hollywood</option>
+                    </select>
+                </div>
+                
+                <div class="form-group">
+                    <label for="device">Device Type *</label>
+                    <input type="text" id="device" name="device" placeholder="Example: iPhone 15 Pro" required>
+                </div>
+                
+                <div class="form-group">
+                    <label for="repair">Issue *</label>
+                    <select id="repair" name="repair" required>
+                        <option value="">Select...</option>
+                        <option value="screen">Screen damage</option>
+                        <option value="battery">Battery issue</option>
+                        <option value="water">Water damage</option>
+                        <option value="camera">Camera problem</option>
+                        <option value="charging">Charging issue</option>
+                        <option value="frp">Samsung FRP Unlock</option>
+                        <option value="other">Other</option>
+                    </select>
+                </div>
+                
+                <div class="form-group">
+                    <label for="message">Details (Optional)</label>
+                    <textarea id="message" name="message" rows="4"></textarea>
+                </div>
+                
+                <button type="submit" class="btn-submit">Send Request</button>
+            </form>
+        </div>
+    </section>
+    
+    <!-- Footer -->
+    <footer>
+        <div class="footer-content">
+            <h3>Matrix Tech Repairs</h3>
+            <p class="footer-tagline">MATRIX YOUR SAVIOR</p>
+            <div class="footer-info">
+                <p><strong>Miami Gardens</strong><br>📞 (786) 258-3507 | 📍 18351 NW 27th Ave, Miami Gardens, FL</p>
+                <p><strong>Hollywood</strong><br>📞 (305) 724-4975 | 📍 926 N Federal Hwy, Hollywood, FL</p>
+                <p>📧 matrixtechrepairs@gmail.com</p>
+            </div>
+            <p style="margin-top: 50px; opacity: 0.5; font-size: 0.9rem;">© 2025 Matrix Tech Repairs. All rights reserved.</p>
+        </div>
+    </footer>
+    
+    <!-- WhatsApp Button -->
+    <a href="https://wa.me/17862583507" class="whatsapp-float" target="_blank">
+        💬
+    </a>
+    
+</body>
+</html>
