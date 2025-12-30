@@ -3,8 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Matrix Tech Repairs - Professional Electronics Repair | Miami Gardens & Hollywood, FL</title>
-    <meta name="description" content="Expert repair for smartphones, tablets, computers, and gaming consoles in Miami Gardens and Hollywood, Florida. Same-day service with warranty.">
+    <title>Matrix Tech Repairs - Professional Electronics Repair | North Miami & Miami Gardens, FL</title>
+    <meta name="description" content="Expert repair for smartphones, tablets, computers, and gaming consoles in North Miami and Miami Gardens, Florida. Same-day service with warranty.">
     <style>
         * {
             margin: 0;
@@ -19,12 +19,30 @@
             background: #ffffff;
         }
         
-        /* Hero Section - More Modern */
+        /* Header with Logo */
+        .header {
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            padding: 30px 50px;
+            z-index: 10;
+            display: flex;
+            align-items: center;
+            justify-content: flex-start;
+        }
+        
+        .logo {
+            height: 60px;
+            width: auto;
+        }
+        
+        /* Hero Section */
         .hero {
             position: relative;
             background: #000000;
             color: white;
-            padding: 140px 20px 120px;
+            padding: 180px 20px 120px;
             text-align: center;
             overflow: hidden;
         }
@@ -113,14 +131,12 @@
             transform: translateY(-2px);
         }
         
-        /* Container */
         .container {
             max-width: 1400px;
             margin: 0 auto;
             padding: 0 40px;
         }
         
-        /* Section */
         .section {
             padding: 120px 20px;
         }
@@ -149,7 +165,6 @@
             font-weight: 300;
         }
         
-        /* Benefits Section - Modern Grid */
         .benefits {
             display: grid;
             grid-template-columns: repeat(3, 1fr);
@@ -207,7 +222,6 @@
             font-weight: 300;
         }
         
-        /* Services Section - Modern Cards */
         .service-grid {
             display: grid;
             grid-template-columns: repeat(3, 1fr);
@@ -280,7 +294,6 @@
             letter-spacing: 1px;
         }
         
-        /* Process Steps - Timeline Style */
         .process-steps {
             display: grid;
             grid-template-columns: repeat(3, 1fr);
@@ -336,7 +349,6 @@
             font-weight: 300;
         }
         
-        /* Locations Section - Side by Side Cards */
         .locations {
             display: grid;
             grid-template-columns: repeat(2, 1fr);
@@ -369,9 +381,9 @@
         }
         
         .location-info {
-            margin-bottom: 25px;
-            color: #333;
-            font-size: 1.1rem;
+            margin-bottom: 20px;
+            color: #2d2d2d;
+            font-size: 1.05rem;
             line-height: 1.8;
         }
         
@@ -387,15 +399,15 @@
             font-size: 1.6rem;
             font-weight: 800;
             color: #000000;
-            margin: 30px 0;
+            margin: 25px 0;
             display: block;
+            text-decoration: none;
         }
         
         .location-phone:hover {
             opacity: 0.7;
         }
         
-        /* CTA Section - Bold */
         .cta-section {
             background: #000000;
             color: white;
@@ -436,7 +448,6 @@
             font-weight: 300;
         }
         
-        /* Contact Form - Clean Design */
         .contact-form {
             max-width: 800px;
             margin: 0 auto;
@@ -457,7 +468,6 @@
             margin-bottom: 10px;
             color: #000000;
             font-weight: 600;
-            font-size: 1rem;
             text-transform: uppercase;
             letter-spacing: 1px;
             font-size: 0.85rem;
@@ -505,7 +515,6 @@
             box-shadow: 0 10px 40px rgba(0,0,0,0.2);
         }
         
-        /* Footer - Minimal */
         footer {
             background: #0a0a0a;
             color: white;
@@ -518,11 +527,14 @@
             margin: 0 auto;
         }
         
+        .footer-logo {
+            height: 80px;
+            width: auto;
+            margin-bottom: 30px;
+        }
+        
         .footer-content h3 {
-            font-size: 2.5rem;
-            margin-bottom: 15px;
-            font-weight: 900;
-            letter-spacing: -1px;
+            display: none;
         }
         
         .footer-tagline {
@@ -542,7 +554,6 @@
             font-weight: 300;
         }
         
-        /* WhatsApp Button - Modern */
         .whatsapp-float {
             position: fixed;
             width: 70px;
@@ -568,21 +579,29 @@
             box-shadow: 0 12px 45px rgba(37, 211, 102, 0.6);
         }
         
-        /* Responsive */
         @media (max-width: 1024px) {
             .benefits,
             .service-grid,
-            .process-steps {
+            .process-steps,
+            .locations {
                 grid-template-columns: repeat(2, 1fr);
                 gap: 40px;
-            }
-            
-            .locations {
-                grid-template-columns: 1fr;
             }
         }
         
         @media (max-width: 768px) {
+            .header {
+                padding: 20px;
+            }
+            
+            .logo, .footer-logo {
+                height: 40px;
+            }
+            
+            .hero {
+                padding: 140px 20px 100px;
+            }
+            
             .hero h1 {
                 font-size: 3rem;
             }
@@ -597,7 +616,8 @@
             
             .benefits,
             .service-grid,
-            .process-steps {
+            .process-steps,
+            .locations {
                 grid-template-columns: 1fr;
                 gap: 30px;
             }
@@ -618,18 +638,19 @@
 </head>
 <body>
     
-    <!-- Hero Section -->
     <section class="hero">
+        <div style="position: absolute; top: 20px; left: 20px; z-index: 100;">
+            <img src="https://i.ibb.co/93HmFZRZ/0e43a517-71b5-45b4-aa10-bdecabe173b9.jpg" alt="Matrix" style="height: 70px; width: auto; display: block;">
+        </div>
         <div class="hero-content">
             <h1>Your Device Broken?<br>We Fix It Fast.</h1>
             <p class="tagline">MATRIX YOUR SAVIOR</p>
-            <p>Expert repair for all electronic devices. Same-day service with warranty in Miami Gardens & Hollywood, Florida.</p>
-            <a href="tel:+17862583507" class="btn btn-primary">Call Miami Gardens</a>
-            <a href="tel:+13057244975" class="btn btn-secondary">Call Hollywood</a>
+            <p>Expert repair for all electronic devices. Same-day service with warranty in North Miami & Miami Gardens, Florida.</p>
+            <a href="tel:+17869220464" class="btn btn-primary">Call North Miami</a>
+            <a href="tel:+17862583507" class="btn btn-secondary">Call Miami Gardens</a>
         </div>
     </section>
     
-    <!-- Why Choose Us -->
     <section class="section">
         <div class="container">
             <h2 class="section-title">Why Matrix Tech Repairs?</h2>
@@ -657,7 +678,6 @@
         </div>
     </section>
     
-    <!-- Services -->
     <section class="section section-light">
         <div class="container">
             <h2 class="section-title">We Repair All Electronic Devices</h2>
@@ -704,7 +724,6 @@
         </div>
     </section>
     
-    <!-- How It Works -->
     <section class="section">
         <div class="container">
             <h2 class="section-title">How It Works</h2>
@@ -732,13 +751,26 @@
         </div>
     </section>
     
-    <!-- Locations -->
     <section class="section section-light">
         <div class="container">
             <h2 class="section-title">Visit Our Locations</h2>
             <p class="section-subtitle">Two convenient locations serving South Florida</p>
             
             <div class="locations">
+                <div class="location-card">
+                    <h3>📍 North Miami</h3>
+                    <div class="location-info">
+                        <strong>Address</strong>
+                        13995 NW 7th Ave<br>
+                        North Miami, FL 33168
+                    </div>
+                    <a href="tel:+17869220464" class="location-phone">📞 (786) 922-0464</a>
+                    <div class="location-info">
+                        <strong>Hours</strong>
+                        Every Day: 10:00 AM - 7:00 PM
+                    </div>
+                </div>
+                
                 <div class="location-card">
                     <h3>📍 Miami Gardens</h3>
                     <div class="location-info">
@@ -749,42 +781,23 @@
                     <a href="tel:+17862583507" class="location-phone">📞 (786) 258-3507</a>
                     <div class="location-info">
                         <strong>Hours</strong>
-                        Mon-Tue: 10:00 AM - 6:00 PM<br>
-                        Wed-Sun: 10:00 AM - 7:00 PM<br>
-                        Fri, Thu & Sat: 10:00 AM - 8:00 PM
-                    </div>
-                </div>
-                
-                <div class="location-card">
-                    <h3>📍 Hollywood</h3>
-                    <div class="location-info">
-                        <strong>Address</strong>
-                        926 N Federal Hwy<br>
-                        Hollywood, FL
-                    </div>
-                    <a href="tel:+13057244975" class="location-phone">📞 (305) 724-4975</a>
-                    <div class="location-info">
-                        <strong>Hours</strong>
-                        Mon-Tue: 10:00 AM - 6:00 PM<br>
-                        Wed-Sun: 10:00 AM - 7:00 PM<br>
-                        Fri, Thu & Sat: 10:00 AM - 8:00 PM
+                        Monday - Saturday: 10:00 AM - 7:00 PM<br>
+                        Sunday: 10:00 AM - 5:00 PM
                     </div>
                 </div>
             </div>
         </div>
     </section>
     
-    <!-- CTA Section -->
     <section class="cta-section">
         <div class="cta-content">
             <h2>Ready to Fix Your Device?</h2>
             <p>Contact us now for a free diagnostic. Same-day service available.</p>
-            <a href="tel:+17862583507" class="btn btn-primary">Call Miami Gardens</a>
-            <a href="tel:+13057244975" class="btn btn-secondary">Call Hollywood</a>
+            <a href="tel:+17869220464" class="btn btn-primary">Call North Miami</a>
+            <a href="tel:+17862583507" class="btn btn-secondary">Call Miami Gardens</a>
         </div>
     </section>
     
-    <!-- Contact Form -->
     <section class="section">
         <div class="container">
             <h2 class="section-title">Get Your Free Quote</h2>
@@ -810,8 +823,8 @@
                     <label for="location">Preferred Location *</label>
                     <select id="location" name="location" required>
                         <option value="">Select...</option>
+                        <option value="north-miami">North Miami</option>
                         <option value="miami-gardens">Miami Gardens</option>
-                        <option value="hollywood">Hollywood</option>
                     </select>
                 </div>
                 
@@ -844,24 +857,20 @@
         </div>
     </section>
     
-    <!-- Footer -->
     <footer>
         <div class="footer-content">
-            <h3>Matrix Tech Repairs</h3>
+            <img src="https://i.ibb.co/93HmFZRZ/0e43a517-71b5-45b4-aa10-bdecabe173b9.jpg" alt="Matrix Tech Repairs" class="footer-logo">
             <p class="footer-tagline">MATRIX YOUR SAVIOR</p>
             <div class="footer-info">
+                <p><strong>North Miami</strong><br>📞 (786) 922-0464 | 📍 13995 NW 7th Ave, North Miami, FL 33168</p>
                 <p><strong>Miami Gardens</strong><br>📞 (786) 258-3507 | 📍 18351 NW 27th Ave, Miami Gardens, FL</p>
-                <p><strong>Hollywood</strong><br>📞 (305) 724-4975 | 📍 926 N Federal Hwy, Hollywood, FL</p>
                 <p>📧 matrixtechrepairs@gmail.com</p>
             </div>
             <p style="margin-top: 50px; opacity: 0.5; font-size: 0.9rem;">© 2025 Matrix Tech Repairs. All rights reserved.</p>
         </div>
     </footer>
     
-    <!-- WhatsApp Button -->
-    <a href="https://wa.me/17862583507" class="whatsapp-float" target="_blank">
-        💬
-    </a>
+    <a href="https://wa.me/17869220464" class="whatsapp-float" target="_blank">💬</a>
     
 </body>
 </html>
